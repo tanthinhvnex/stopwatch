@@ -5,7 +5,7 @@ let hours = 0;
 
 function startStopwatch() {
     if (!timer) {
-        timer = setInterval(updateStopwatch, 1000);
+        timer = setInterval(updateStopwatch, 1);
     }
 }
 
@@ -36,9 +36,9 @@ function updateStopwatch() {
 }
 
 function updateDisplay() {
-    document.getElementById("display").innerHTML = `${pad(hours)}:${pad(minutes)}:${pad(seconds)} `;
+    document.getElementById("display").innerHTML = `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
 }
 
 function pad(value) {
-    return value < 10 ? `0${value}` : `$value`;
+    return value < 10 ? `0${value}` : `${value}`;
 }
